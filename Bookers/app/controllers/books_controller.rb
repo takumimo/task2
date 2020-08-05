@@ -5,11 +5,7 @@ class BooksController < ApplicationController
 	
 
 
-	def edit 
-	end
-
-	def destroy
-	end	
+	
 
 	private
 end
