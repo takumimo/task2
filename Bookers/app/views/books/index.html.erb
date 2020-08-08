@@ -1,7 +1,4 @@
-<h1>Books</h1>
-
 <table>
-	<caption>table title and/or explanatory text</caption>
 	<thead>
 		<tr>
 			<th>Title</th>
@@ -14,28 +11,19 @@
 			<tr>
 				<td><%= book.title %></td>
 				<td><%= book.body %></td>
-				<td><%= link_to 'Show', book %></td>
-				<td><%= link_to 'Edit', '/edit' %></td>
-				<td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<br>
+		<br>
 
-<h2>New book</h2>
+		<h2>New book</h2>
 
-<%= form_for(@book) do |f| %>
-	<div>
-		<h3>タイトル</h3>
-		<%= f.label :title %><br>
-		<%= f.text/field :title %>
-	</div>
-	
-	<div>
-		<h3>本文</h3>
-		<%= f.label :body %><br>
-		<%=  f.text_area :body %>
-	</div>
-<% end %>
+		<%= form_for(@book, url: '/new') do |f| %>
+			<h4>タイトル</h4>
+			<%= f.text_field :title %>
+			<h4>本文</h4>
+			<%= f.text_area :body %>
+			<%= f.submit '投稿' %>
+		<% end %>
