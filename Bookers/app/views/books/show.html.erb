@@ -1,0 +1,23 @@
+<h1>New Book</h1>
+
+<p id = "notice">
+	<%= notice %>
+</p>
+
+<div>
+	<h3 class = "book-title">
+
+		<%= @book.title %>
+	</h3>
+</div>
+<div>
+	<h3 class = "book-body">
+		<%= @book.body %>
+	</h3>
+</div>
+
+
+
+<br>
+<%= link_to 'Edit',edit_book_path %>
+<%= link_to('back',books_path) %>
